@@ -1,20 +1,36 @@
-///////////////////////////
-// name: robofive server //
-// author: Rob Calcroft  //
-///////////////////////////
+//////////////////////////
+// name: robofive       //
+// author: Rob Calcroft //
+//////////////////////////
 
+
+/**
+ * Define those cheeky vars
+ * @type {[type]}
+ */
 var express = require('express'),
 	app     = express(),
 	five    = require("johnny-five"),
 	board   = new five.Board(),
+	server = require('http').Server(app),
+	io = require('socket.io')(server),
 	items   = {};
 
+/**
+ * Allows the node server to serve files
+ */
 app.use(express.static(__dirname + '/'));
 
-var server = require('http').Server(app);
-server.listen(80)
-var io = require('socket.io')(server);
+/**
+ * Gets the server to listen on port 3000
+ */
+server.listen(3000)
 
+
+/**
+ * Waits until the board is ready and then allows the routes to be called
+ * @return {[type]}
+ */
 board.on('ready', function() {
 
 	/**
@@ -164,6 +180,11 @@ board.on('ready', function() {
 	  })
 	})
 
+	/**
+	 * Uses the devices accelerometer data to control the pitch of the piezo
+	 * @param  {[type]} socket
+	 * @return {[type]}
+	 */
 	io.on('connection', function (socket) {
 	  socket.on('blink', function (data) {
 		if(typeof data.fade !== "undefined"){
