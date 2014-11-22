@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<title>Robofive</title>
+</head>
+<body>
+	<h1>Robofive!</h1>
+	<h2>API in NodeJS &amp; Express which talks to an Arduino!</h2>
+	<h2>Uses websockets to make noises!</h2>
+	<div class="button-group">
+		<h3>LEDs</h3>
+		<p>
+			<button id='light' data-color='green' data-state='on' style='background:#2ecc71'>On</button>
+			<button id='light' data-color='green' data-state='off' style='background:#27ae60'>Off</button>
+			<br>
+			<button id='light' data-color='red' data-state='on' style='background:#e74c3c'>On</button>
+			<button id='light' data-color='red' data-state='off' style='background:#c0392b'>Off</button>
+			<br>
+			<button id='light' data-color='blue' data-state='on' style='background:#3498db'>On</button>
+			<button id='light' data-color='blue' data-state='off' style='background:#2980b9'>Off</button>
+			<br>
+			<button id='light' data-color='yellow' data-state='on' style='background:#f1c40f'>On</button>
+			<button id='light' data-color='yellow' data-state='off' style='background:#f39c12'>Off</button>
+
+		</p>
+	</div>
+	<div class="button-group">
+		<h3>Sounds</h3>
+		<p>
+			<button id='sounds' data-song='merry-xmas' style='background:#16a085'>Play Merry XMAS</button>
+			<button id='sounds' data-song='song' style='background:#16a085'>Play a song</button>
+		</p>
+	</div>
+</body>
+	<script src="https://cdn.socket.io/socket.io-1.2.1.js"></script>
+	<script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="main.js"></script>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "robofive",
+  "version": "0.0.0",
+  "description": "An API for an Arduino using NodeJS & Johnny Five",
+  "main": "robofive.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robcalcroft/robofive.git"
+  },
+  "author": "Rob Calcroft",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/robcalcroft/robofive/issues"
+  },
+  "homepage": "https://github.com/robcalcroft/robofive",
+  "devDependencies": {
+    "express": "~4.10.2",
+    "johnny-five": "~0.8.28",
+    "socket.io": "~1.2.1"
+  }
+}
