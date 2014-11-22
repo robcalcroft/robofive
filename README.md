@@ -18,8 +18,8 @@ The project contains a small NodeJS server which creates API routes to control a
 ###API Routes
 | Route        | Action           | Example |
 | ------------- |---------------|------------|
-| **/led/:colour/:state**| Turns on or off an led colour of your choice |`http://localhost/led/red/on`
-| **/led/all/:state** |Turns on or off all of the leds in the array|`http://localhost/all/off`
+| **/led/:colour/:state**| Turns on or off an led colour of your choice |`http://localhost:3000/led/red/on`
+| **/led/all/:state** |Turns on or off all of the leds in the array|`http://localhost:3000/all/off`
 | **/piezo/play/merry-xmas** | Plays a butchered merry christmas song through the buzzer|n/a
 
 ###Arduino Schema
