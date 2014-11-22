@@ -1,7 +1,8 @@
 robofive
 ========
 
-An API for an Arduino using NodeJS &amp; Johnny Five
+An experimental project using Jonny-five (a Javascript framework for Arduinos)
+The project contains a small NodeJS server which creates API routes to control actions on the Arduino. Also included is a basic webpage to demonstrate the functionality in a webpage however see below for a list of the routes used.
 
 ###Install
 1. Use the pictured schema (below) to build your Arduino board.
@@ -14,4 +15,12 @@ An API for an Arduino using NodeJS &amp; Johnny Five
 7. `node robofive.js` to start the server.
 8. Visit `localhost:3000` to view the web interface. Only mobile browsers will be able to use the web socket functionality
 
+###API Routes
+| Route        | Action           | Example |
+| ------------- |---------------|------------|
+| **/led/:colour/:state**| Turns on or off an led colour of your choice |`http://localhost/led/red/on`
+| **/led/all/:state** |Turns on or off all of the leds in the array|`http://localhost/all/off`
+| **/piezo/play/merry-xmas** | Plays a butchered merry christmas song through the buzzer|n/a
+
+###Arduino Schema
 ![Device schema](http://i.imgur.com/8YYoN0T.png)
