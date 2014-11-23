@@ -187,7 +187,7 @@ board.on('ready', function() {
 	 */
 	io.on('connection', function (socket) {
 	  socket.on('blink', function (data) {
-		if(typeof data.fade !== "undefined"){
+		if(data.fade !== undefined){
 			items.piezo.frequency(data.fade, 100);
 		}
 	  });
